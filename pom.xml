@@ -171,15 +171,6 @@
     </dependencies>
   </dependencyManagement>
 
-  <reporting>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-project-info-reports-plugin</artifactId>
-      </plugin>
-    </plugins>
-  </reporting>
-
   <build>
     <finalName>${project.artifactId}</finalName>
     <defaultGoal>clean install</defaultGoal>
@@ -454,12 +445,6 @@
                 </execution>
             </executions>
             -->
-          </plugin>
-
-          <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>findbugs-maven-plugin</artifactId>
-            <version>2.5.3</version>
           </plugin>
 
           <plugin>
