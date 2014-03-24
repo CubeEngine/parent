@@ -56,17 +56,6 @@
     <url>http://ci.cubeisland.de/job/CubeEngine</url>
   </ciManagement>
 
-  <issueManagement>
-    <system>jira</system>
-    <url>http://bugs.engine.cubeisland.de/browse/CE</url>
-  </issueManagement>
-
-  <scm>
-    <url>scm:git:http://git.cubeisland.de/cubeengine/cubeengine</url>
-    <connection>scm:git:http://git.cubeisland.de/cubeengine/cubeengine.git</connection>
-    <developerConnection>scm:git:http://git.cubeisland.de/cubeengine/cubeengine.git</developerConnection>
-  </scm>
-
   <repositories>
     <repository>
       <id>cubeisland-repo</id>
