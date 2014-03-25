@@ -6,8 +6,10 @@
   <artifactId>parent</artifactId>
   <groupId>de.cubeisland.engine</groupId>
   <version>1</version>
-  <url>http://engine.cubeisland.de</url>
+
+  <name>CubeEngine Parent</name>
   <description>Minecraft module framework.</description>
+  <url>https://engine.cubeisland.de</url>
   <inceptionYear>2012</inceptionYear>
 
   <prerequisites>
@@ -18,10 +20,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.build.timestamp.format>yyyy-MM-dd HH:mm:ssZ</maven.build.timestamp.format>
     <timestamp>${maven.build.timestamp}</timestamp>
-    <minecraftVersion>1.7.2</minecraftVersion>
-    <bukkitVersion>${minecraftVersion}-R0.4-SNAPSHOT</bukkitVersion>
     <jdkVersion>1.7</jdkVersion>
-    <projectBase>${basedir}/..</projectBase>
     <externalPackage>${project.groupId}.external</externalPackage>
   </properties>
 
@@ -42,6 +41,44 @@
     <name>Cube Island</name>
     <url>https://cubeisland.de</url>
   </organization>
+
+  <scm>
+    <url>scm:git:https://github.com/CubeEngineDev/parent</url>
+    <connection>scm:git:https://github.com/CubeEngineDev/parent.git</connection>
+    <developerConnection>scm:git:https://github.com/CubeEngineDev/parent.git</developerConnection>
+  </scm>
+
+  <developers>
+    <developer>
+      <id>pschichtel</id>
+      <name>Phillip Schichtel</name>
+      <email>phillip.public@schich.tel</email>
+      <roles>
+        <role>Development Lead</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>faithcaio</id>
+      <name>Anselm Brehme</name>
+      <roles>
+        <role>Developer</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>boeserwolf91</id>
+      <name>Stefan Wolf</name>
+      <roles>
+        <role>Developer</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>totokaka</id>
+      <name>Tobias Laundal</name>
+      <roles>
+        <role>Developer</role>
+      </roles>
+    </developer>
+  </developers>
 
   <licenses>
     <license>
@@ -120,31 +157,6 @@
         <artifactId>joda-time</artifactId>
         <version>2.3</version>
       </dependency>
-      <dependency>
-        <groupId>org.bukkit</groupId>
-        <artifactId>bukkit</artifactId>
-        <version>${bukkitVersion}</version>
-        <type>jar</type>
-        <scope>compile</scope>
-        <exclusions>
-          <exclusion>
-            <groupId>org.yaml</groupId>
-            <artifactId>yaml</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>com.googlecode.json-simple</groupId>
-            <artifactId>json-simple</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>commons-lang</groupId>
-            <artifactId>commons-lang</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
 
       <!-- Test dependencies -->
       <dependency>
@@ -221,7 +233,6 @@
         <groupId>de.cubeisland.maven.plugins</groupId>
         <artifactId>messageextractor-maven-plugin</artifactId>
       </plugin>
-
     </plugins>
 
     <pluginManagement>
@@ -296,7 +307,7 @@
         <plugin>
           <groupId>de.cubeisland.maven.plugins</groupId>
           <artifactId>githead-maven-plugin</artifactId>
-          <version>1.0.2-SNAPSHOT</version>
+          <version>1.0.2</version>
           <executions>
             <execution>
               <goals>
@@ -323,14 +334,6 @@
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-surefire-report-plugin</artifactId>
-          <version>2.16</version>
-          <configuration>
-            <showSuccess>true</showSuccess>
-          </configuration>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.1</version>
           <configuration>
@@ -347,17 +350,12 @@
           <artifactId>maven-license-plugin</artifactId>
           <version>1.10.b1</version>
           <configuration>
-            <header>https://raw.githubusercontent.com/CubeEngineDev/CubeEngine/master/header.txt</header>
+            <header>https://raw.github.com/CubeEngineDev/CubeEngine/master/header.txt</header>
             <strictCheck>true</strictCheck>
             <includes>
               <include>**/*.java</include>
             </includes>
           </configuration>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-project-info-reports-plugin</artifactId>
-          <version>2.7</version>
         </plugin>
         <plugin>
           <groupId>de.cubeisland.maven.plugins</groupId>
@@ -421,32 +419,6 @@
 
       <build>
         <plugins>
-          <!--
-              Checks style
-          -->
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-checkstyle-plugin</artifactId>
-            <configuration>
-              <consoleOutput>true</consoleOutput>
-              <logViolationsToConsole>true</logViolationsToConsole>
-              <failsOnError>true</failsOnError>
-              <failsOnError>true</failsOnError>
-              <configLocation>${projectBase}/checkstyle.xml</configLocation>
-            </configuration>
-            <!--
-            <executions>
-                <execution>
-                    <id>checkstyle</id>
-                    <phase>validate</phase>
-                    <goals>
-                        <goal>check</goal>
-                    </goals>
-                </execution>
-            </executions>
-            -->
-          </plugin>
-
           <plugin>
             <groupId>com.mycila.maven-license-plugin</groupId>
             <artifactId>maven-license-plugin</artifactId>
