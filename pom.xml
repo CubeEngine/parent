@@ -22,6 +22,7 @@
     <timestamp>${maven.build.timestamp}</timestamp>
     <jdkVersion>1.7</jdkVersion>
     <externalPackage>${project.groupId}.external</externalPackage>
+    <rawParentRepo>https://raw.github.com/CubeEngine/parent/master</rawParentRepo>
   </properties>
 
   <distributionManagement>
@@ -282,7 +283,7 @@
           <artifactId>maven-license-plugin</artifactId>
           <version>1.10.b1</version>
           <configuration>
-            <header>https://raw.github.com/CubeEngine/parent/master/header.txt</header>
+            <header>${rawParentRepo}/header.txt</header>
             <strictCheck>true</strictCheck>
             <includes>
               <include>**/*.java</include>
@@ -297,7 +298,7 @@
             <configurations>
               <configuration>${basedir}/extractor.xml</configuration>
               <configuration>${basedir}/../extractor.xml</configuration>
-              <configuration>https://raw.github.com/CubeEngine/parent/master/extractor.xml</configuration>
+              <configuration>${rawParentRepo}/extractor.xml</configuration>
             </configurations>
           </configuration>
         </plugin>
