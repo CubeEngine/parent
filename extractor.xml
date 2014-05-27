@@ -43,7 +43,7 @@
     <createEmptyTemplate>false</createEmptyTemplate>
     <template>${basedir}/src/main/resources/translations/messages.pot</template>
     <header>
-      <comments>https://raw.github.com/CubeEngineDev/CubeEngine/master/header.txt</comments>
+      <comments>https://raw.github.com/CubeEngine/parent/master/header.txt</comments>
       <metadata>
         <entry key="Project-Id-Version">${groupId}:${artifactId}:${version}</entry>
         <entry key="Report-Msgid-Bugs-To">development@cubeisland.de</entry>
