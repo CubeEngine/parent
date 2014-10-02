@@ -9,7 +9,7 @@
 
   <name>CubeEngine Parent</name>
   <description>Minecraft module framework.</description>
-  <url>https://engine.cubeisland.de</url>
+  <url>http://cubeisland.de/engine</url>
   <inceptionYear>2012</inceptionYear>
 
   <prerequisites>
@@ -40,13 +40,13 @@
 
   <organization>
     <name>Cube Island</name>
-    <url>https://cubeisland.de</url>
+    <url>http://cubeisland.de</url>
   </organization>
 
   <scm>
-    <url>scm:git:https://github.com/CubeEngineDev/parent</url>
-    <connection>scm:git:https://github.com/CubeEngineDev/parent.git</connection>
-    <developerConnection>scm:git:https://github.com/CubeEngineDev/parent.git</developerConnection>
+    <url>scm:git:https://github.com/CubeEngine/parent</url>
+    <connection>scm:git:https://github.com/CubeEngine/parent.git</connection>
+    <developerConnection>scm:git:https://github.com/CubeEngine/parent.git</developerConnection>
   </scm>
 
   <developers>
@@ -150,8 +150,8 @@
         <artifactId>githead-maven-plugin</artifactId>
       </plugin>
       <plugin>
-        <groupId>com.mycila.maven-license-plugin</groupId>
-        <artifactId>maven-license-plugin</artifactId>
+        <groupId>com.mycila</groupId>
+        <artifactId>license-maven-plugin</artifactId>
         <executions>
           <execution>
             <id>add-license-headers</id>
@@ -193,22 +193,22 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-deploy-plugin</artifactId>
-          <version>2.8.1</version>
+          <version>2.8.2</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-site-plugin</artifactId>
-          <version>3.3</version>
+          <version>3.4</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-source-plugin</artifactId>
-          <version>2.2.1</version>
+          <version>2.3</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-javadoc-plugin</artifactId>
-          <version>2.9.1</version>
+          <version>2.10</version>
           <configuration>
             <charset>${project.build.sourceEncoding}</charset>
             <docencoding>${project.build.sourceEncoding}</docencoding>
@@ -217,12 +217,12 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-jar-plugin</artifactId>
-          <version>2.4</version>
+          <version>2.5</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-install-plugin</artifactId>
-          <version>2.5.1</version>
+          <version>2.5.2</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -279,10 +279,11 @@
           </configuration>
         </plugin>
         <plugin>
-          <groupId>com.mycila.maven-license-plugin</groupId>
-          <artifactId>maven-license-plugin</artifactId>
-          <version>1.10.b1</version>
+          <groupId>com.mycila</groupId>
+          <artifactId>license-maven-plugin</artifactId>
+          <version>2.6</version>
           <configuration>
+            <strictCheck>true</strictCheck>
             <header>${rawParentRepo}/header.txt</header>
             <strictCheck>true</strictCheck>
             <includes>
@@ -352,8 +353,8 @@
       <build>
         <plugins>
           <plugin>
-            <groupId>com.mycila.maven-license-plugin</groupId>
-            <artifactId>maven-license-plugin</artifactId>
+            <groupId>com.mycila</groupId>
+            <artifactId>license-maven-plugin</artifactId>
             <executions>
               <execution>
                 <id>add-license-headers</id>
