@@ -20,7 +20,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.build.timestamp.format>yyyy-MM-dd HH:mm:ssZ</maven.build.timestamp.format>
     <timestamp>${maven.build.timestamp}</timestamp>
-    <jdkVersion>1.7</jdkVersion>
+    <jdkVersion>1.8</jdkVersion>
     <externalPackage>${project.groupId}.external</externalPackage>
     <rawParentRepo>https://raw.github.com/CubeEngine/parent/master</rawParentRepo>
   </properties>
