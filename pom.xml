@@ -292,6 +292,9 @@
             <optimize>true</optimize>
             <showDeprecation>true</showDeprecation>
             <showWarnings>true</showWarnings>
+            <compilerArguments>
+              <parameters />
+            </compilerArguments>
           </configuration>
         </plugin>
         <plugin>
