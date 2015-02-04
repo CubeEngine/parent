@@ -200,25 +200,33 @@
             </constructor>
 
             <annotation>
-                <name>de.cubeisland.engine.core.command.reflected.Command</name>
+                <name>de.cubeisland.engine.command.parametric.Command</name>
                 <fields>
                     <field>desc</field>
                 </fields>
             </annotation>
 
             <annotation>
-                <name>de.cubeisland.engine.core.command.reflected.context.Indexed</name>
+                <name>de.cubeisland.engine.command.parametric.Label</name>
                 <fields>
-                    <field>label</field>
+                    <field>value</field>
                 </fields>
             </annotation>
 
             <annotation>
-                <name>de.cubeisland.engine.core.command.reflected.context.Named</name>
+                <name>de.cubeisland.engine.command.filter.Restricted</name>
                 <fields>
-                    <field>label</field>
+                    <field>msg</field>
                 </fields>
             </annotation>
+
+            <annotation>
+                <name>de.cubeisland.engine.command.parametric.Desc</name>
+                <fields>
+                    <field>value</field>
+                </fields>
+            </annotation>
+
         </translatables>
 
     </source>
