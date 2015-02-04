@@ -47,7 +47,7 @@
             </method>
 
             <method>
-                <name>de.cubeisland.engine.core.command.context.CubeContext#sendTranslated</name>
+                <name>de.cubeisland.engine.core.command.CommandContext#sendTranslated</name>
                 <signature>
                     <type>de.cubeisland.engine.core.util.formatter.MessageType</type>
                     <type use-as="singular">java.lang.String</type>
@@ -56,7 +56,7 @@
             </method>
 
             <method>
-                <name>de.cubeisland.engine.core.command.context.CubeContext#sendTranslatedN</name>
+                <name>de.cubeisland.engine.core.command.CommandContext#sendTranslatedN</name>
                 <signature>
                     <type>de.cubeisland.engine.core.util.formatter.MessageType</type>
                     <type>int</type>
@@ -143,7 +143,7 @@
                     <type>de.cubeisland.engine.core.module.Module</type>
                     <type>java.lang.String</type>
                     <type use-as="singular">java.lang.String</type>
-                    <type>de.cubeisland.engine.core.command.context.CubeContextFactory</type>
+                    <type>de.cubeisland.engine.core.command.CommandContextFactory</type>
                     <type>de.cubeisland.engine.core.permission.Permission</type>
                     <type>boolean</type>
                 </signature>
@@ -155,7 +155,7 @@
                     <type>de.cubeisland.engine.core.module.Module</type>
                     <type>java.lang.String</type>
                     <type use-as="singular">java.lang.String</type>
-                    <type>de.cubeisland.engine.core.command.context.CubeContextFactory</type>
+                    <type>de.cubeisland.engine.core.command.CommandContextFactory</type>
                 </signature>
             </constructor>
 
