@@ -27,14 +27,14 @@
 
   <distributionManagement>
     <repository>
-      <id>cubeisland-repo</id>
+      <id>cubeengine-repo</id>
       <name>Release</name>
-      <url>http://maven.cubeisland.de/content/repositories/releases</url>
+      <url>http://maven.cubeengine.org/content/repositories/releases</url>
     </repository>
     <snapshotRepository>
-      <id>cubeisland-repo</id>
+      <id>cubeengine-repo</id>
       <name>Snapshot</name>
-      <url>http://maven.cubeisland.de/content/repositories/snapshots</url>
+      <url>http://maven.cubeengine.org/content/repositories/snapshots</url>
     </snapshotRepository>
   </distributionManagement>
 
@@ -91,22 +91,22 @@
 
   <ciManagement>
     <system>jenkins</system>
-    <url>http://ci.cubeisland.de/job/CubeEngine</url>
+    <url>http://ci.cubyte.org/job/CubeEngine</url>
   </ciManagement>
 
   <repositories>
     <repository>
-      <id>cubeisland-repo</id>
-      <name>Cube Island Nexus</name>
-      <url>http://repo.cubeisland.de/</url>
+      <id>cubeengine-repo</id>
+      <name>CubeEngine Public Repository</name>
+      <url>http://repo.cubeengine.org/</url>
     </repository>
   </repositories>
 
   <pluginRepositories>
     <pluginRepository>
-      <id>cubeisland-repo</id>
-      <name>Cube Island Nexus</name>
-      <url>http://repo.cubeisland.de/</url>
+      <id>cubeengine-repo</id>
+      <name>CubeEngine Public Repository</name>
+      <url>http://repo.cubeengine.org/</url>
       <releases>
         <enabled>true</enabled>
       </releases>
