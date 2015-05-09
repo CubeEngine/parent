@@ -200,28 +200,28 @@
             </constructor>
 
             <annotation>
-                <name>de.cubeisland.engine.command.parametric.Command</name>
+                <name>de.cubeisland.engine.butler.parametric.Command</name>
                 <fields>
                     <field>desc</field>
                 </fields>
             </annotation>
 
             <annotation>
-                <name>de.cubeisland.engine.command.parametric.Label</name>
+                <name>de.cubeisland.engine.butler.parametric.Label</name>
                 <fields>
                     <field>value</field>
                 </fields>
             </annotation>
 
             <annotation>
-                <name>de.cubeisland.engine.command.filter.Restricted</name>
+                <name>de.cubeisland.engine.butler.filter.Restricted</name>
                 <fields>
                     <field>msg</field>
                 </fields>
             </annotation>
 
             <annotation>
-                <name>de.cubeisland.engine.command.parametric.Desc</name>
+                <name>de.cubeisland.engine.butler.parametric.Desc</name>
                 <fields>
                     <field>value</field>
                 </fields>
