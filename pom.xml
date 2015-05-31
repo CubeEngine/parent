@@ -226,6 +226,7 @@
                   </manifest>
                   <manifestEntries>
                       <sourceVersion>${sourceVersion}</sourceVersion>
+                      <version>${version}</version>
                   </manifestEntries>
               </archive>
           </configuration>
