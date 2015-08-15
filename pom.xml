@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <packaging>pom</packaging>
 
-  <groupId>de.cubeisland.engine.module</groupId>
+  <groupId>org.cubeengine</groupId>
   <artifactId>parent</artifactId>
   <version>1</version>
 
