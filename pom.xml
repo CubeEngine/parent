@@ -256,6 +256,7 @@
             <executions>
               <execution>
                 <id>head</id>
+                  <phase>initialize</phase>
                   <goals>
                     <goal>head</goal>
                   </goals>
