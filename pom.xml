@@ -9,7 +9,7 @@
 
   <name>CubeEngine Parent</name>
   <description>Minecraft module framework.</description>
-  <url>http://cubeisland.de/engine</url>
+  <url>http://cubeengine.org</url>
   <inceptionYear>2012</inceptionYear>
 
   <prerequisites>
@@ -90,11 +90,6 @@
     </license>
   </licenses>
 
-  <ciManagement>
-    <system>jenkins</system>
-    <url>http://ci.cubyte.org/job/CubeEngine</url>
-  </ciManagement>
-
   <repositories>
     <repository>
       <id>cubeengine-repo</id>
@@ -122,14 +117,6 @@
     <defaultGoal>clean install</defaultGoal>
 
     <resources>
-      <resource>
-        <targetPath>.</targetPath>
-        <directory>${basedir}/src/main/resources/</directory>
-        <filtering>true</filtering>
-        <includes>
-          <include>module.yml</include>
-        </includes>
-      </resource>
       <resource>
         <targetPath>.</targetPath>
         <directory>${basedir}/src/main/resources/</directory>
