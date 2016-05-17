@@ -6,19 +6,21 @@
         <directory>${basedir}/src/main/java</directory>
 
         <translatables>
+
+            <!-- CommandContext -->
             <method>
-                <name>de.cubeisland.engine.core.command.CommandSender#getTranslation</name>
+                <name>org.cubeengine.libcube.service.command.CommandContext#sendTranslated</name>
                 <signature>
-                    <type>de.cubeisland.engine.core.util.formatter.MessageType</type>
+                    <type>org.spongepowered.api.text.format.TextFormat</type>
                     <type use-as="singular">java.lang.String</type>
                     <type>java.lang.Object[]</type>
                 </signature>
             </method>
 
             <method>
-                <name>de.cubeisland.engine.core.command.CommandSender#getTranslationN</name>
+                <name>org.cubeengine.libcube.service.command.CommandContext#sendTranslatedN</name>
                 <signature>
-                    <type>de.cubeisland.engine.core.util.formatter.MessageType</type>
+                    <type>org.spongepowered.api.text.format.TextFormat</type>
                     <type>int</type>
                     <type use-as="singular">java.lang.String</type>
                     <type use-as="plural">java.lang.String</type>
@@ -26,81 +28,60 @@
                 </signature>
             </method>
 
+            <!-- I18n simple -->
             <method>
-                <name>de.cubeisland.engine.core.command.CommandSender#sendTranslated</name>
+                <name>org.cubeengine.libcube.service.i18n.I18n#translate</name>
                 <signature>
-                    <type>de.cubeisland.engine.core.util.formatter.MessageType</type>
                     <type use-as="singular">java.lang.String</type>
-                    <type>java.lang.Object[]</type>
                 </signature>
             </method>
 
             <method>
-                <name>de.cubeisland.engine.core.command.CommandSender#sendTranslatedN</name>
+                <name>org.cubeengine.libcube.service.i18n.I18n#translateN</name>
                 <signature>
-                    <type>de.cubeisland.engine.core.util.formatter.MessageType</type>
                     <type>int</type>
                     <type use-as="singular">java.lang.String</type>
                     <type use-as="plural">java.lang.String</type>
-                    <type>java.lang.Object[]</type>
                 </signature>
             </method>
 
-            <method>
-                <name>de.cubeisland.engine.core.command.CommandContext#sendTranslated</name>
-                <signature>
-                    <type>de.cubeisland.engine.core.util.formatter.MessageType</type>
-                    <type use-as="singular">java.lang.String</type>
-                    <type>java.lang.Object[]</type>
-                </signature>
-            </method>
+            <!-- I18n simple /w Locale -->
 
             <method>
-                <name>de.cubeisland.engine.core.command.CommandContext#sendTranslatedN</name>
-                <signature>
-                    <type>de.cubeisland.engine.core.util.formatter.MessageType</type>
-                    <type>int</type>
-                    <type use-as="singular">java.lang.String</type>
-                    <type use-as="plural">java.lang.String</type>
-                    <type>java.lang.Object[]</type>
-                </signature>
-            </method>
-
-            <method>
-                <name>de.cubeisland.engine.core.i18n.I18n#translate</name>
-                <signature>
-                    <type>de.cubeisland.engine.core.util.formatter.MessageType</type>
-                    <type use-as="singular">java.lang.String</type>
-                    <type>java.lang.Object[]</type>
-                </signature>
-            </method>
-
-            <method>
-                <name>de.cubeisland.engine.core.i18n.I18n#translate</name>
+                <name>org.cubeengine.libcube.service.i18n.I18n#translate</name>
                 <signature>
                     <type>java.util.Locale</type>
-                    <type>de.cubeisland.engine.core.util.formatter.MessageType</type>
                     <type use-as="singular">java.lang.String</type>
-                    <type>java.lang.Object[]</type>
                 </signature>
             </method>
 
             <method>
-                <name>de.cubeisland.engine.core.i18n.I18n#translateN</name>
-                <signature>
-                    <type>de.cubeisland.engine.core.util.formatter.MessageType</type>
-                    <type>int</type>
-                    <type use-as="singular">java.lang.String</type>
-                    <type use-as="plural">java.lang.String</type>
-                    <type>java.lang.Object[]</type>
-                </signature>
-            </method>
-
-            <method>
-                <name>de.cubeisland.engine.core.i18n.I18n#translateN</name>
+                <name>org.cubeengine.libcube.service.i18n.I18n#translateN</name>
                 <signature>
                     <type>java.util.Locale</type>
-                    <type>de.cubeisland.engine.core.util.formatter.MessageType</type>
+                    <type>int</type>
+                    <type use-as="singular">java.lang.String</type>
+                    <type use-as="plural">java.lang.String</type>
+                </signature>
+            </method>
+
+            <!-- TextFormat and Locale -->
+
+            <method>
+                <name>org.cubeengine.libcube.service.i18n.I18n#translate</name>
+                <signature>
+                    <type>java.util.Locale</type>
+                    <type>org.spongepowered.api.text.format.TextFormat</type>
+                    <type use-as="singular">java.lang.String</type>
+                    <type>java.lang.Object[]</type>
+                </signature>
+            </method>
+
+            <method>
+                <name>org.cubeengine.libcube.service.i18n.I18n#translateN</name>
+                <signature>
+                    <type>java.util.Locale</type>
+                    <type>org.spongepowered.api.text.format.TextFormat</type>
                     <type>int</type>
                     <type use-as="singular">java.lang.String</type>
                     <type use-as="plural">java.lang.String</type>
@@ -108,12 +89,62 @@
                 </signature>
             </method>
 
+            <!-- alternative -->
+
             <method>
-                <name>de.cubeisland.engine.core.user.UserManager#broadcastTranslatedWithPerm</name>
+                <name>org.cubeengine.libcube.service.i18n.I18n#getTranslation</name>
                 <signature>
-                    <type>de.cubeisland.engine.core.util.formatter.MessageType</type>
+                    <type>java.util.Locale</type>
+                    <type>org.spongepowered.api.text.format.TextFormat</type>
                     <type use-as="singular">java.lang.String</type>
-                    <type>de.cubeisland.engine.core.permission.Permission</type>
+                    <type>java.lang.Object[]</type>
+                </signature>
+            </method>
+
+            <method>
+                <name>org.cubeengine.libcube.service.i18n.I18n#getTranslation</name>
+                <signature>
+                    <type>java.util.Locale</type>
+                    <type>org.spongepowered.api.text.format.TextFormat</type>
+                    <type>int</type>
+                    <type use-as="singular">java.lang.String</type>
+                    <type use-as="plural">java.lang.String</type>
+                    <type>java.lang.Object[]</type>
+                </signature>
+            </method>
+
+            <!-- Send to MessageReceiver -->
+
+            <method>
+                <name>org.cubeengine.libcube.service.i18n.I18n#getTranslation</name>
+                <signature>
+                    <type>org.spongepowered.api.text.channel.MessageReceiver</type>
+                    <type>org.spongepowered.api.text.format.TextFormat</type>
+                    <type use-as="singular">java.lang.String</type>
+                    <type>java.lang.Object[]</type>
+                </signature>
+            </method>
+
+            <method>
+                <name>org.cubeengine.libcube.service.i18n.I18n#getTranslation</name>
+                <signature>
+                    <type>org.spongepowered.api.text.channel.MessageReceiver</type>
+                    <type>org.spongepowered.api.text.format.TextFormat</type>
+                    <type>int</type>
+                    <type use-as="singular">java.lang.String</type>
+                    <type use-as="plural">java.lang.String</type>
+                    <type>java.lang.Object[]</type>
+                </signature>
+            </method>
+
+            <!-- Broadcaster -->
+
+            <method>
+                <name>org.cubeengine.libcube.service.Broadcaster#broadcastTranslatedWithPerm</name>
+                <signature>
+                    <type>org.spongepowered.api.text.format.TextFormat</type>
+                    <type use-as="singular">java.lang.String</type>
+                    <type>java.lang.String</type>
                     <type>java.lang.Object[]</type>
                 </signature>
             </method>
@@ -121,7 +152,7 @@
             <method>
                 <name>de.cubeisland.engine.core.user.UserManager#broadcastTranslated</name>
                 <signature>
-                    <type>de.cubeisland.engine.core.util.formatter.MessageType</type>
+                    <type>org.spongepowered.api.text.format.TextFormat</type>
                     <type use-as="singular">java.lang.String</type>
                     <type>java.lang.Object[]</type>
                 </signature>
@@ -130,13 +161,14 @@
             <method>
                 <name>de.cubeisland.engine.core.user.UserManager#broadcastTranslatedStatus</name>
                 <signature>
-                    <type>de.cubeisland.engine.core.util.ChatFormat</type>
+                    <type>org.spongepowered.api.text.format.TextFormat</type>
                     <type use-as="singular">java.lang.String</type>
-                    <type>de.cubeisland.engine.core.command.CommandSender</type>
+                    <type>org.spongepowered.api.command.CommandSource</type>
                     <type>java.lang.Object[]</type>
                 </signature>
             </method>
 
+            <!--
             <constructor>
                 <name>de.cubeisland.engine.core.command.CubeCommand</name>
                 <signature>
@@ -148,56 +180,7 @@
                     <type>boolean</type>
                 </signature>
             </constructor>
-
-            <constructor>
-                <name>de.cubeisland.engine.core.command.CubeCommand</name>
-                <signature>
-                    <type>de.cubeisland.engine.core.module.Module</type>
-                    <type>java.lang.String</type>
-                    <type use-as="singular">java.lang.String</type>
-                    <type>de.cubeisland.engine.core.command.CommandContextFactory</type>
-                </signature>
-            </constructor>
-
-            <constructor>
-                <name>de.cubeisland.engine.core.command.ContainerCommand</name>
-                <signature>
-                    <type>de.cubeisland.engine.core.module.Module</type>
-                    <type>java.lang.String</type>
-                    <type use-as="singular">java.lang.String</type>
-                </signature>
-            </constructor>
-
-            <constructor>
-                <name>de.cubeisland.engine.core.command.ContainerCommand</name>
-                <signature>
-                    <type>de.cubeisland.engine.core.module.Module</type>
-                    <type>java.lang.Class</type>
-                    <type>java.lang.String</type>
-                    <type use-as="singular">java.lang.String</type>
-                </signature>
-            </constructor>
-
-            <constructor>
-                <name>de.cubeisland.engine.core.command.ContainerCommand</name>
-                <signature>
-                    <type>de.cubeisland.engine.core.module.Module</type>
-                    <type>java.lang.String</type>
-                    <type use-as="singular">java.lang.String</type>
-                    <type>java.util.Set</type>
-                </signature>
-            </constructor>
-
-            <constructor>
-                <name>de.cubeisland.engine.core.command.ContainerCommand</name>
-                <signature>
-                    <type>de.cubeisland.engine.core.module.Module</type>
-                    <type>java.lang.Class</type>
-                    <type>java.lang.String</type>
-                    <type use-as="singular">java.lang.String</type>
-                    <type>java.util.Set</type>
-                </signature>
-            </constructor>
+            -->
 
             <annotation>
                 <name>org.cubeengine.butler.parametric.Command</name>
@@ -234,7 +217,7 @@
     <catalog format="gettext">
         <removeUnusedMessages>true</removeUnusedMessages>
         <createEmptyTemplate>false</createEmptyTemplate>
-        <template>${basedir}/src/main/resources/translations/messages.pot</template>
+        <template>${basedir}/src/main/assets/org/cubeengine/translations/messages_${artifactId}.pot</template>
         <header>
             <comments><![CDATA[${resource.load("${rawParentRepo}/header.txt")}]]></comments>
             <metadata>
