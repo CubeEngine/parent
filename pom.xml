@@ -40,8 +40,8 @@
   </distributionManagement>
 
   <organization>
-    <name>Cube Island</name>
-    <url>http://cubeisland.de</url>
+    <name>CubeEngine</name>
+    <url>http://cubeengine.org</url>
   </organization>
 
   <scm>
@@ -153,6 +153,21 @@
       <plugin>
         <groupId>org.cubeengine.maven.plugins</groupId>
         <artifactId>pericopist-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <compilerArgs>
+            <arg>-Acubeengine.module.version=${project.version}</arg>
+            <arg>-Acubeengine.module.sourceversion=${sourceVersion}</arg>
+            <arg>-Acubeengine.module.description=${project.description}</arg>
+            <arg>-Acubeengine.module.id=${project.artifactId}</arg>
+            <arg>-Acubeengine.module.name=${project.name}</arg>
+            <arg>-Acubeengine.module.team=${organization.name}</arg>
+            <arg>-Acubeengine.module.url=${organization.url}</arg>
+          </compilerArgs>
+        </configuration>
       </plugin>
     </plugins>
 
@@ -294,6 +309,7 @@
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.6.1</version>
           <configuration>
+            <forceJavacCompilerUse>true</forceJavacCompilerUse>
             <encoding>${project.build.sourceEncoding}</encoding>
             <source>${jdkVersion}</source>
             <target>${jdkVersion}</target>
