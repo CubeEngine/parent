@@ -30,14 +30,14 @@
 
             <!-- I18n simple -->
             <method>
-                <name>org.cubeengine.libcube.service.i18n.I18n#translate</name>
+                <name>org.cubeengine.libcube.service.i18n.I18nTranslate#getTranslation</name>
                 <signature>
                     <type use-as="singular">java.lang.String</type>
                 </signature>
             </method>
 
             <method>
-                <name>org.cubeengine.libcube.service.i18n.I18n#translateN</name>
+                <name>org.cubeengine.libcube.service.i18n.I18nTranslate#getTranslationN</name>
                 <signature>
                     <type>int</type>
                     <type use-as="singular">java.lang.String</type>
@@ -48,7 +48,7 @@
             <!-- I18n simple /w Locale -->
 
             <method>
-                <name>org.cubeengine.libcube.service.i18n.I18n#translate</name>
+                <name>org.cubeengine.libcube.service.i18n.I18nTranslate#getTranslation</name>
                 <signature>
                     <type>java.util.Locale</type>
                     <type use-as="singular">java.lang.String</type>
@@ -56,7 +56,7 @@
             </method>
 
             <method>
-                <name>org.cubeengine.libcube.service.i18n.I18n#translateN</name>
+                <name>org.cubeengine.libcube.service.i18n.I18nTranslate#getTranslationN</name>
                 <signature>
                     <type>java.util.Locale</type>
                     <type>int</type>
@@ -68,7 +68,7 @@
             <!-- I18n simple /w CommandSource -->
 
             <method>
-                <name>org.cubeengine.libcube.service.i18n.I18n#translate</name>
+                <name>org.cubeengine.libcube.service.i18n.I18nTranslate#getTranslation</name>
                 <signature>
                     <type>org.spongepowered.api.command.CommandSource</type>
                     <type use-as="singular">java.lang.String</type>
@@ -78,7 +78,7 @@
             <!-- TextFormat and Locale -->
 
             <method>
-                <name>org.cubeengine.libcube.service.i18n.I18n#translate</name>
+                <name>org.cubeengine.libcube.service.i18n.I18nTranslate#translate</name>
                 <signature>
                     <type>java.util.Locale</type>
                     <type>org.spongepowered.api.text.format.TextFormat</type>
@@ -88,7 +88,7 @@
             </method>
 
             <method>
-                <name>org.cubeengine.libcube.service.i18n.I18n#translateN</name>
+                <name>org.cubeengine.libcube.service.i18n.I18nTranslate#translateN</name>
                 <signature>
                     <type>java.util.Locale</type>
                     <type>org.spongepowered.api.text.format.TextFormat</type>
@@ -99,12 +99,10 @@
                 </signature>
             </method>
 
-            <!-- alternative -->
-
             <method>
-                <name>org.cubeengine.libcube.service.i18n.I18n#getTranslation</name>
+                <name>org.cubeengine.libcube.service.i18n.I18nTranslate#translate</name>
                 <signature>
-                    <type>java.util.Locale</type>
+                    <type>org.cubeengine.dirigent.context.Context</type>
                     <type>org.spongepowered.api.text.format.TextFormat</type>
                     <type use-as="singular">java.lang.String</type>
                     <type>java.lang.Object[]</type>
@@ -112,9 +110,9 @@
             </method>
 
             <method>
-                <name>org.cubeengine.libcube.service.i18n.I18n#getTranslation</name>
+                <name>org.cubeengine.libcube.service.i18n.I18nTranslate#translateN</name>
                 <signature>
-                    <type>java.util.Locale</type>
+                    <type>org.cubeengine.dirigent.context.Context</type>
                     <type>org.spongepowered.api.text.format.TextFormat</type>
                     <type>int</type>
                     <type use-as="singular">java.lang.String</type>
@@ -126,9 +124,9 @@
             <!-- Get from Object with TextFormat -->
 
             <method>
-                <name>org.cubeengine.libcube.service.i18n.I18n#getTranslation</name>
+                <name>org.cubeengine.libcube.service.i18n.I18nTranslate#translate</name>
                 <signature>
-                    <type>java.lang.Object</type>
+                    <type>org.spongepowered.api.entity.living.player.Player</type>
                     <type>org.spongepowered.api.text.format.TextFormat</type>
                     <type use-as="singular">java.lang.String</type>
                     <type>java.lang.Object[]</type>
@@ -136,9 +134,9 @@
             </method>
 
             <method>
-                <name>org.cubeengine.libcube.service.i18n.I18n#getTranslation</name>
+                <name>org.cubeengine.libcube.service.i18n.I18nTranslate#translateN</name>
                 <signature>
-                    <type>java.lang.Object</type>
+                    <type>org.spongepowered.api.entity.living.player.Player</type>
                     <type>org.spongepowered.api.text.format.TextFormat</type>
                     <type>int</type>
                     <type use-as="singular">java.lang.String</type>
@@ -147,10 +145,8 @@
                 </signature>
             </method>
 
-            <!-- Send to MessageReceiver with TextFormat -->
-
             <method>
-                <name>org.cubeengine.libcube.service.i18n.I18n#sendTranslated</name>
+                <name>org.cubeengine.libcube.service.i18n.I18nTranslate#translate</name>
                 <signature>
                     <type>org.spongepowered.api.text.channel.MessageReceiver</type>
                     <type>org.spongepowered.api.text.format.TextFormat</type>
@@ -160,9 +156,82 @@
             </method>
 
             <method>
-                <name>org.cubeengine.libcube.service.i18n.I18n#sendTranslatedN</name>
+                <name>org.cubeengine.libcube.service.i18n.I18nTranslate#translateN</name>
                 <signature>
                     <type>org.spongepowered.api.text.channel.MessageReceiver</type>
+                    <type>org.spongepowered.api.text.format.TextFormat</type>
+                    <type>int</type>
+                    <type use-as="singular">java.lang.String</type>
+                    <type use-as="plural">java.lang.String</type>
+                    <type>java.lang.Object[]</type>
+                </signature>
+            </method>
+
+            <method>
+                <name>org.cubeengine.libcube.service.i18n.I18nTranslate#translate</name>
+                <signature>
+                    <type>org.spongepowered.api.text.channel.ChatTypeMessageReceiver</type>
+                    <type>org.spongepowered.api.text.format.TextFormat</type>
+                    <type use-as="singular">java.lang.String</type>
+                    <type>java.lang.Object[]</type>
+                </signature>
+            </method>
+
+            <method>
+                <name>org.cubeengine.libcube.service.i18n.I18nTranslate#translateN</name>
+                <signature>
+                    <type>org.spongepowered.api.text.channel.ChatTypeMessageReceiver</type>
+                    <type>org.spongepowered.api.text.format.TextFormat</type>
+                    <type>int</type>
+                    <type use-as="singular">java.lang.String</type>
+                    <type use-as="plural">java.lang.String</type>
+                    <type>java.lang.Object[]</type>
+                </signature>
+            </method>
+
+
+            <!-- Send to MessageReceiver with TextFormat -->
+
+            <method>
+                <name>org.cubeengine.libcube.service.i18n.I18nTranslate#send</name>
+                <signature>
+                    <type>org.spongepowered.api.text.channel.MessageReceiver</type>
+                    <type>org.spongepowered.api.text.format.TextFormat</type>
+                    <type use-as="singular">java.lang.String</type>
+                    <type>java.lang.Object[]</type>
+                </signature>
+            </method>
+
+            <method>
+                <name>org.cubeengine.libcube.service.i18n.I18nTranslate#sendN</name>
+                <signature>
+                    <type>org.spongepowered.api.text.channel.MessageReceiver</type>
+                    <type>org.spongepowered.api.text.format.TextFormat</type>
+                    <type>int</type>
+                    <type use-as="singular">java.lang.String</type>
+                    <type use-as="plural">java.lang.String</type>
+                    <type>java.lang.Object[]</type>
+                </signature>
+            </method>
+
+            <!-- Send to ChatType MessageReceiver with TextFormat -->
+
+            <method>
+                <name>org.cubeengine.libcube.service.i18n.I18nTranslate#send</name>
+                <signature>
+                    <type>org.spongepowered.api.text.chat.ChatType</type>
+                    <type>org.spongepowered.api.text.channel.ChatTypeMessageReceiver</type>
+                    <type>org.spongepowered.api.text.format.TextFormat</type>
+                    <type use-as="singular">java.lang.String</type>
+                    <type>java.lang.Object[]</type>
+                </signature>
+            </method>
+
+            <method>
+                <name>org.cubeengine.libcube.service.i18n.I18nTranslate#sendN</name>
+                <signature>
+                    <type>org.spongepowered.api.text.chat.ChatType</type>
+                    <type>org.spongepowered.api.text.channel.ChatTypeMessageReceiver</type>
                     <type>org.spongepowered.api.text.format.TextFormat</type>
                     <type>int</type>
                     <type use-as="singular">java.lang.String</type>
@@ -184,7 +253,7 @@
             </method>
 
             <method>
-                <name>de.cubeisland.engine.core.user.UserManager#broadcastTranslated</name>
+                <name>org.cubeengine.libcube.service.Broadcaster#broadcastTranslated</name>
                 <signature>
                     <type>org.spongepowered.api.text.format.TextFormat</type>
                     <type use-as="singular">java.lang.String</type>
@@ -193,7 +262,7 @@
             </method>
 
             <method>
-                <name>de.cubeisland.engine.core.user.UserManager#broadcastTranslatedStatus</name>
+                <name>org.cubeengine.libcube.service.Broadcaster#broadcastTranslatedStatus</name>
                 <signature>
                     <type>org.spongepowered.api.text.format.TextFormat</type>
                     <type use-as="singular">java.lang.String</type>
