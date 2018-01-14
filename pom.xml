@@ -5,7 +5,7 @@
 
   <groupId>org.cubeengine</groupId>
   <artifactId>parent</artifactId>
-  <version>2</version>
+  <version>3</version>
 
   <name>CubeEngine Parent</name>
   <description>Minecraft module framework.</description>
@@ -111,6 +111,16 @@
       </snapshots>
     </pluginRepository>
   </pluginRepositories>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.spongepowered</groupId>
+      <artifactId>spongeapi</artifactId>
+      <version>7.1.0-SNAPSHOT</version>
+      <type>jar</type>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
 
   <build>
     <finalName>${project.artifactId}</finalName>
