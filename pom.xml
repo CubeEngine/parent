@@ -5,7 +5,7 @@
 
   <groupId>org.cubeengine</groupId>
   <artifactId>parent</artifactId>
-  <version>4</version>
+  <version>5</version>
 
   <name>CubeEngine Parent</name>
   <description>Minecraft module framework.</description>
@@ -164,8 +164,8 @@
             <arg>-Acubeengine.module.description=${project.description}</arg>
             <arg>-Acubeengine.module.id=${project.artifactId}</arg>
             <arg>-Acubeengine.module.name=${project.name}</arg>
-            <arg>-Acubeengine.module.team=${organization.name}</arg>
-            <arg>-Acubeengine.module.url=${organization.url}</arg>
+            <arg>-Acubeengine.module.team=${project.organization.name}</arg>
+            <arg>-Acubeengine.module.url=${project.organization.url}</arg>
           </compilerArgs>
         </configuration>
       </plugin>
@@ -228,7 +228,7 @@
                   </manifest>
                   <manifestEntries>
                       <sourceVersion>${sourceVersion}</sourceVersion>
-                      <version>${version}</version>
+                      <version>${project.version}</version>
                   </manifestEntries>
               </archive>
           </configuration>
