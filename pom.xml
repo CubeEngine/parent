@@ -5,7 +5,7 @@
 
   <groupId>org.cubeengine</groupId>
   <artifactId>parent</artifactId>
-  <version>5</version>
+  <version>6</version>
 
   <name>CubeEngine Parent</name>
   <description>Minecraft module framework.</description>
@@ -24,6 +24,8 @@
     <externalPackage>${project.groupId}.external</externalPackage>
     <rawParentRepo>https://raw.github.com/CubeEngine/parent/master</rawParentRepo>
     <sourceVersion>${githead.branch}-${githead.commit}</sourceVersion>
+    <libcube.version>unknown</libcube.version>
+    <sponge.version>unknown</sponge.version>
   </properties>
 
   <distributionManagement>
@@ -166,6 +168,8 @@
             <arg>-Acubeengine.module.name=${project.name}</arg>
             <arg>-Acubeengine.module.team=${project.organization.name}</arg>
             <arg>-Acubeengine.module.url=${project.organization.url}</arg>
+            <arg>-Acubeengine.module.libcube.version=${libcube.version}</arg>
+            <arg>-Acubeengine.module.sponge.version=${sponge.version}</arg>
           </compilerArgs>
         </configuration>
       </plugin>
