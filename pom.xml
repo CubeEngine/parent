@@ -12,10 +12,6 @@
   <url>http://cubeengine.org</url>
   <inceptionYear>2012</inceptionYear>
 
-  <prerequisites>
-    <maven>3.0.0</maven>
-  </prerequisites>
-
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.build.timestamp.format>yyyy-MM-dd HH:mm:ssZ</maven.build.timestamp.format>
