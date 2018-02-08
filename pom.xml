@@ -20,8 +20,6 @@
     <externalPackage>${project.groupId}.external</externalPackage>
     <rawParentRepo>https://raw.github.com/CubeEngine/parent/master</rawParentRepo>
     <sourceVersion>${githead.branch}-${githead.commit}</sourceVersion>
-    <libcube.version>unknown</libcube.version>
-    <sponge.version>unknown</sponge.version>
   </properties>
 
   <distributionManagement>
@@ -153,6 +151,26 @@
         <artifactId>pericopist-maven-plugin</artifactId>
       </plugin>
       <plugin>
+        <groupId>io.reformanda.semper</groupId>
+        <artifactId>dependencyversion-maven-plugin</artifactId>
+        <version>1.0.0</version>
+        <executions>
+          <execution>
+            <id>install</id>
+            <goals>
+              <goal>set-version</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <propertySets>
+            <propertySet>
+              <transitive>false</transitive>
+            </propertySet>
+          </propertySets>
+        </configuration>
+      </plugin>
+      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
@@ -164,8 +182,8 @@
             <arg>-Acubeengine.module.name=${project.name}</arg>
             <arg>-Acubeengine.module.team=${project.organization.name}</arg>
             <arg>-Acubeengine.module.url=${project.organization.url}</arg>
-            <arg>-Acubeengine.module.libcube.version=${libcube.version}</arg>
-            <arg>-Acubeengine.module.sponge.version=${sponge.version}</arg>
+            <arg>-Acubeengine.module.libcube.version=${org.cubeengine:libcube:jar.version}</arg>
+            <arg>-Acubeengine.module.sponge.version=${org.spongepowered:spongeapi:jar.version}</arg>
           </compilerArgs>
         </configuration>
       </plugin>
